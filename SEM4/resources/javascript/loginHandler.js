@@ -15,6 +15,12 @@ function loginRequest() {
             showResult(response);
         });
 }
+function logOut(){
+  console.log("hej7");
+  $.getJSON("Logout", function (response){
+      showResult(response);
+  });
+}
 function showResult(result) {
     $("#res").text(result.value);
 }

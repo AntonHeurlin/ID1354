@@ -14,7 +14,7 @@
     if($this->session->get('username') != null){
       if($this->session->get('username') != 'Fel'){
         ?>
-          <li class="phpsession-logout"><a href="Logout">LOG OUT</a></li>
+          <li class="phpsession-logout"><a id="logOut" onclick="logOut()">LOG OUT</a></li>
       <?php  }}
       ?>
   </ul>

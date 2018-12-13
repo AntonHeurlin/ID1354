@@ -9,25 +9,12 @@
     </li>
     <li><a href="CalendarDirect">TastyCalender</a></li>
     <li><a href="LoginDirect">LOG IN</a></li>
-    <li class="phpsession">      <?php
-    session_start();
-        if($this->session->get('username') != null){
-          if($this->session->get('username') == 'Fel'){
-            echo 'INVALID USER';
-          }
-          else{
-            echo 'active user:';
-            echo $this->session->get('username');
-          }
-        }
-        else{
-          echo 'STATUS: NOT LOGGED ON';
-        }?></li>
+    <li class="phpsession"><li class="phpsession"><span id="res"></span></li>
     <?php
     if($this->session->get('username') != null){
       if($this->session->get('username') != 'Fel'){
         ?>
-          <li class="phpsession-logout"><a href="Logout">LOG OUT</a></li>
+          <li class="phpsession-logout"><a id="logOut" onclick="logOut()">LOG OUT</a></li>
       <?php  }}
       ?>
   </ul>

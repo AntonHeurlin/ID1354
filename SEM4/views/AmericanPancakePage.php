@@ -17,6 +17,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="../../resources/javascript/commentStore.js"></script>
+        <script src="../../resources/javascript/loginHandler.js"></script>
 </head>
 <body>
   <p id="recipeSite" hidden>AmericanPancake</p>
