@@ -5,11 +5,7 @@ namespace TastyRecipes\View;
 use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 
-/**
- * Shows the chat conversation, allows the user to add and delete entries.
- *
- * @author Leif Lindback, leifl@kth.se
- */
+
 class GetEntries extends AbstractRequestHandler {
 
   private $recipeSite;

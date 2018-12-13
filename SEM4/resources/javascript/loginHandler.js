@@ -8,7 +8,6 @@ console.log("hej1");
 
 
 });
-
 function loginRequest() {
    console.log("hej3");
     $.getJSON("Login", $("#userinformation").serialize(),

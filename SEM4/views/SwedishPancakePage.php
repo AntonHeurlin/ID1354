@@ -12,6 +12,11 @@
     <link rel="stylesheet"
           type="text/css"
           href="../../resources/css/loginstyle.css">
+          <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="../../resources/javascript/commentStore.js"></script>
 </head>
 <body>
   <p id='recipeSite' name='recipeSite' hidden>SwedishPancake</p>
@@ -39,45 +44,35 @@
       3. Cook the pancake for about 2 minutes, until the bottom is light brown. Loosen with a spatula, turn and cook the other side.<br><br>
       4. Serve hot with your favourite toppings, such as whipped cream and raspberry jam. Enjoy!<br><br>
     </p>
-      <div class="section group">
-          <h2 class="col span_1_of_4">Reviews!</h2>
-      </div>
-      <div class="section group">
-          <div class="col span_4_of_4">
+    <div class="section group">
+        <h2 class="col span_1_of_4">Reviews!</h2>
+    </div>
+    <div class="section group">
+        <div class="col span_4_of_4">
+          <p><span id="res"></span></p>
+          <div id="fromServer"></div>
 
-            <?php
-            foreach ($entries as $entry) {
-                echo ("<p class='author'>" . $entry->getNickName() . ":</p>");
-                echo("<p class='entry'>");
-                echo(nl2br($entry->getMsg()));
-                echo ("</p>");
-                if ($entry->getNickName() === $username) {
-                    echo("<form action='DeleteEntry' method='POST'>");
-                    echo("<input type='hidden' name='timestamp' value='" .
-                    $entry->getTimestamp() . "'/>");
-                    echo("<input type='hidden' name='recipeSite' value='SwedishPancake'/>");
-                    echo("<input type='submit' value='Delete'/>");
-                    echo("</form>");
-                }
-            }
-              ?>
-      <?php
-      if($this->session->get('username') != null){
-        if($this->session->get('username') != 'Fel'){
-        ?>
-        <form action="StoreEntry" method='post'>
-                <div class="col span_2_of_4">
-                    <label for="entry"><?php echo $this->session->get('username') ?>, write a comment if you wish!</label>
-                </div>
-                    <textarea id= "msg" rows = 5 name='msg' placeholder="Write your comment here."></textarea>
-                <div>
-                    <input type="hidden" id="msgSection" name='msgSection' value="SwedishPancake"/>
-                    <input type="submit" value="Send Comment"/>
-                </div>
-        </form>
-      <?php }} ?>
+    <?php
+    if($this->session->get('username') != null){
+      if($this->session->get('username') != 'Fel'){
+      ?>
+      <form id="msgDetails">
+              <div class="col span_2_of_4">
+                  <label for="entry"><?php echo $this->session->get('username') ?>, write a comment if you wish!</label>
+              </div>
+                  <textarea id= "msg" rows = 5 name='msg' placeholder="Write your comment here."></textarea>
+              <div>
+                  <input type="hidden" id="msgSection" name='msgSection' value="SwedishPancake"/>
 
-          </div>
-      </div>
-      </div>
+              </div>
+      </form>
+      <button id="SendComment"><u>Send Comment</u></button>
+    <?php }} ?>
+
+        </div>
+    </div>
+    </div>
+
+  </div>
+</div>
 </html>

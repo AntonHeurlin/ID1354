@@ -20,11 +20,6 @@ function storeComment() {
     $.getJSON("StoreEntry",$("#msgDetails").serialize(),
     function (response) {
       readReviews();
-        //+"<form id='deleteForm'>"
-        //+"<input type='hidden' name='timestamp' value='delete'/>"
-        //+"<input type='hidden' name='recipeSite' value='AmericanPancake'/>"
-        //+"</form>"
-        //+"<button id='DeleteComment'><u>Delete this comment</u></button>");
 });
 }
 
@@ -56,11 +51,4 @@ function deleteComment() {
   $.getJSON("DeleteEntry", $("#deleteForm").serialize(), function (response) {
     readReviews();
   });
-}
-
-function getUsername() {
-  console.log("getting userinfo?");
-  $.getJSON("Userinformation", function (result){
-    return result;
-  })
 }

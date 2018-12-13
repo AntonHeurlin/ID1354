@@ -6,11 +6,7 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 use TastyRecipes\Model\Entry;
 
-/**
- * Shows the chat conversation, allows the user to add and delete entries.
- *
- * @author Leif Lindback, leifl@kth.se
- */
+
 class Userinformation extends AbstractRequestHandler {
 
 

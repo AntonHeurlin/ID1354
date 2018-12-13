@@ -6,12 +6,7 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 use TastyRecipes\Controller\Controller;
 
-/**
- * Starts a session and shows a view
- * where the user shall specify nick name.
- *
- * @author Leif Lindback, leifl@kth.se
- */
+
 class AmericanPancakeDirect extends AbstractRequestHandler {
 
   private $recipeSite = 'AmericanPancake';

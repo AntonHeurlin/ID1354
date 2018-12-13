@@ -6,11 +6,7 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 use TastyRecipes\Model\Entry;
 
-/**
- * Deletes the specified entry.
- *
- * @author Leif Lindback, leifl@kth.se
- */
+
 class DeleteEntry extends AbstractRequestHandler {
 
     private $timestamp;

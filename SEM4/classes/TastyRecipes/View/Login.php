@@ -6,12 +6,7 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Controller\Controller;
 use TastyRecipes\Util\Constants;
 
-/**
- * There is no authentication, this class just stores the user's nickname and shows the
- * chat conversation.
- *
- * @author Leif Lindback, leifl@kth.se
- */
+
 class Login extends AbstractRequestHandler {
 
     private $nickName;
